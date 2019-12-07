@@ -78,7 +78,7 @@ const checkCnpLastNumber = () =>{
 	const sumElements = '279146358279';
 	let sumCnp = 0;
 	for (let i = 0; i < sumElements.length; i++) {
-		sumCnp = sumElements[i]*stringCnp[i];		
+		sumCnp = sumCnp + (sumElements[i]*inputCnp[i]);		
 	}
 	if (sumCnp % 11 == parseInt(inputCnp[inputCnp.length-1])) {
 		let result = document.createElement("h3");
