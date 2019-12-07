@@ -72,3 +72,23 @@ function validate(evt) {
     if(theEvent.preventDefault) theEvent.preventDefault();
   }
 }
+
+const checkCnpLastNumber = () =>{
+	const inputCnp = document.getElementById("cnp").value;//string
+	const sumElements = '279146358279';
+	let sumCnp = 0;
+	for (let i = 0; i < sumElements.length; i++) {
+		sumCnp = sumElements[i]*stringCnp[i];		
+	}
+	if (sumCnp % 11 == parseInt(inputCnp[inputCnp.length-1])) {
+		let result = document.createElement("h3");
+		result.innerHTML = "Your CNP is VALID according to the control index !";
+		document.getElementById("postResult").appendChild(result);
+	} else {
+		let result = document.createElement("h3");
+		result.innerHTML = "Your CNP is NOT VALID according to the control index !";
+		document.getElementById("postResult").appendChild(result);
+	}
+}
+
+
